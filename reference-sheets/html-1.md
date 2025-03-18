@@ -1,22 +1,22 @@
 # Introduktion til HTML: En Trin-for-Trin Guide
 
-HTML (HyperText Markup Language) er fundamentet for enhver hjemmeside, du ser online. Tænk på det som skelettet, der giver struktur til webindhold. I denne guide vil jeg gennemgå det grundlæggende i HTML på en klar og organiseret måde med masser af eksempler.
+HTML (HyperText Markup Language) er fundamentet for alle hjemmesider, du ser online. Tænk på det som skelettet, der giver struktur til webindhold. I denne guide gennemgår vi det grundlæggende i HTML på en klar og organiseret måde med masser af eksempler.
 
 ## Hvad er HTML?
 
-HTML er et opmærkningssprog, ikke et programmeringssprog. Det betyder, at det bruger særlige tags til at "markere" eller navngive forskellige dele af et dokument. Disse tags fortæller webbrowsere (som Chrome, Firefox eller Safari), hvordan indholdet skal vises.
+HTML er teknisk set et "opmærkningssprog" (Markup Language), ikke et "programmeringssprog". Det betyder, at det bruger særlige tags til at "markere" eller navngive forskellige dele af et dokument, eller en hjemmeside. Disse tags fortæller webbrowsere (som Chrome, Firefox eller Safari), hvordan indholdet skal vises.
 
 I modsætning til programmeringssprog, der kan udføre beregninger eller træffe beslutninger, beskriver HTML blot, hvad ting er. For eksempel fortæller HTML browseren "denne tekst er en overskrift" eller "dette er et afsnit" eller "dette er et billede." Browseren beslutter derefter, hvordan disse elementer skal vises baseret på dens standardindstillinger.
 
 ## Forståelse af Kodeindrykning
 
-Du vil måske bemærke, at HTML-kode ofte skrives med nogle linjer indrykket (flyttet til højre) ved hjælp af mellemrum eller tabulatorer. Denne indrykning tjener flere vigtige formål:
+Du har noget bidt mærke i, at kode (også HTML) ofte skrives med nogle linjer indrykket (flyttet til højre) ved hjælp af mellemrum eller tabulatorer (tabs). Denne indrykning tjener flere vigtige formål:
 
 1. **Læsbarhed**: Indrykning gør koden lettere at læse ved visuelt at vise, hvilke elementer der er indeholdt i andre. Dette er især nyttigt, når du har mange indlejrede elementer.
 
-2. **Struktur**: Indrykning afspejler HTML's hierarkiske struktur. Når et element er inde i et andet element, indrykker vi det for at vise dette forælder-barn forhold.
+2. **Struktur**: Indrykning afspejler HTML's hierarkiske struktur. Når et element er inde i et andet element, indrykker vi det for at vise dette forælder-barn forhold (ja, forælder-barn, eller parent-child, er officiel terminologi).
 
-3. **Lettere Fejlfinding**: Når din kode har korrekt indrykning, er det meget lettere at opdage fejl som manglende afsluttende tags.
+3. **Lettere Fejlfinding**: Når din kode har korrekt indrykning, er det meget lettere at opdage fejl, såsom manglende afsluttende tags.
 
 Her er et eksempel på indrykket HTML-kode:
 
@@ -29,13 +29,13 @@ Her er et eksempel på indrykket HTML-kode:
 </body>
 ```
 
-I dette eksempel er `<h1>` og `<p>` elementerne indrykket, fordi de er inde i `<div>` elementet, som selv er inde i `<body>` elementet. Denne indrykning gør det klart, at disse elementer er indlejret i hinanden.
+I dette eksempel er `<h1>` og `<p>` elementerne indrykket, fordi de er inde i `<div>` elementet, som selv er inde i `<body>` elementet. Denne indrykning gør det klart, at disse elementer er indlejret i hinanden, og har et vidst forhold til hinanden.
 
-Indrykning påvirker ikke, hvordan hjemmesiden ser ud i browseren—det er udelukkende for at hjælpe mennesker med at læse og skrive koden mere effektivt. Tænk på det som afsnit og mellemrum i almindelig skrivning—de ændrer ikke betydningen, men de gør det meget lettere at læse.
+Indrykning påvirker ikke, hvordan hjemmesiden ser ud i browseren - det er udelukkende for at hjælpe mennesker med at læse og skrive koden mere effektivt. Tænk på det som afsnit og mellemrum i almindelig skrivning - de ændrer ikke betydningen, men de gør det meget lettere at læse.
 
 ## Hvordan HTML-filer fungerer
 
-HTML-filer er simpelthen tekstfiler med en `.html` filendelse. Du kan oprette dem ved hjælp af enhver teksteditor som Notepad, Visual Studio Code eller Sublime Text.
+HTML-filer er grundlæggende set tekstfiler med en `.html` filendelse. Du kan oprette dem ved hjælp af enhver teksteditor som Notepad, Visual Studio Code eller Sublime Text. Vi vil bruge Visual Studio Code i 99% af tilfældene.
 
 Når du opretter en HTML-fil, skriver du i bund og grund instruktioner til webbrowsere. Når nogen besøger din hjemmeside, downloader deres browser din HTML-fil, læser den linje for linje og bygger hjemmesiden i henhold til dine instruktioner.
 
@@ -60,31 +60,29 @@ Ethvert HTML-dokument følger denne grundlæggende struktur:
 
 Lad os gennemgå, hvad hver del gør i detaljer:
 
-- `<!DOCTYPE html>` - Denne erklæring kommer først i et HTML-dokument. Det er faktisk ikke et HTML-tag; det er en instruktion til browseren om, hvilken version af HTML du bruger. Erklæringen `<!DOCTYPE html>` indikerer, at du bruger HTML5, den nyeste version af HTML. Dette hjælper browsere med at gengive din side korrekt.
+- `<!DOCTYPE html>` - Denne "erklæring" kommer først i et HTML-dokument. Det er faktisk ikke et HTML-tag; det er en instruktion til browseren om, hvilken version af HTML du bruger. Erklæringen `<!DOCTYPE html>` indikerer, at du bruger HTML5, den nyeste version af HTML. Dette hjælper browsere med at displaye din side korrekt.
 
-- `<html>` - Dette er rodelementet, der indeholder alle andre HTML-elementer. Hvert eneste element på din side skal være inde i dette tag. Det er som beholderen for hele dokumentet. Det afsluttende `</html>` tag kommer helt til sidst i dit dokument.
+- `<html>` - Dette er rod-elementet, der indeholder alle andre HTML-elementer. Hvert eneste element på din side skal være inde i dette tag. Det er som beholderen for hele dokumentet. Det afsluttende `</html>` tag kommer helt til sidst i dit dokument.
 
 - `<head>` - Denne sektion indeholder meta-information om dokumentet—information, der ikke direkte vises på hjemmesiden. Dette inkluderer ting som sidetitlen, links til CSS-stylesheets, JavaScript-filer, tegnsætinformation og instruktioner om, hvordan siden skal opføre sig på forskellige enheder. Tænk på det som "bag kulisserne" information.
 
 - `<title>` - Dette indstiller titlen, der vises i browser-fanen. Den bruges også af søgemaskiner, når de viser din side i søgeresultater. Hvert HTML-dokument bør have en meningsfuld titel, der beskriver sidens indhold.
 
-- `<body>` - Dette indeholder alt det indhold, der er synligt på hjemmesiden. Alt hvad brugeren ser og interagerer med—tekst, billeder, links, formularer—er inde i body-elementet. Hvis det er synligt på din hjemmeside, hører det til i body.
+- `<body>` - Dette indeholder alt det indhold, der er synligt på hjemmesiden. Alt hvad brugeren ser og interagerer med - tekst, billeder, links, formularer - er inde i body-elementet. Hvis det er synligt på din hjemmeside, hører det til i body.
 
 ## Forståelse af HTML-tags
 
-HTML-tags er byggestenene i HTML. De kommer typisk i par: et åbningstag og et lukningstag. Åbningstagget signalerer, hvor et element begynder, og lukningstagget signalerer, hvor det slutter.
+HTML-tags er byggestenene i HTML. De kommer typisk i par: et åbnings-tag og et luknings-tag. Åbnings-tagget signalerer, hvor et element begynder, og luknings-tagget signalerer, hvor det slutter.
 
 ```html
-<tagnavn>Indhold går her</tagnavn>
+<tagnavn>Indhold her</tagnavn>
 ```
 
-Lad os uddybe dette yderligere:
-
-- Åbningstagget starter med `<` efterfulgt af tagnavnet og slutter med `>`. For eksempel: `<p>`.
-- Lukningstagget starter med `</` efterfulgt af det samme tagnavn og slutter med `>`. For eksempel: `</p>`.
+- Åbnings-tagget starter med `<` efterfulgt af tag-navnet og slutter med `>`. For eksempel: `<p>`.
+- Luknings-tagget starter med `</` efterfulgt af det samme tag-navn og slutter med `>`. For eksempel: `</p>`.
 - Indholdet går mellem disse tags. Dette kan være tekst, billeder eller endda andre HTML-elementer.
 
-Når et element indeholder et andet element, kalder vi det "indlejring". For eksempel:
+Når et element indeholder et andet element, kalder vi det "indlejring", eller "nesting". For eksempel:
 
 ```html
 <p>Dette er et afsnit med <strong>fed tekst</strong> indeni.</p>
@@ -109,7 +107,7 @@ Disse tags repræsenterer elementer, der ikke omslutter indhold:
 
 ### Overskrifter
 
-HTML tilbyder seks niveauer af overskrifter, fra `<h1>` (mest vigtig) til `<h6>` (mindst vigtig). Tænk på disse som overskrifterne i en bog eller artikel—med hovedtitler, kapiteltitler, sektionsoverskrifter og så videre.
+HTML tilbyder seks niveauer af overskrifter, fra `<h1>` (mest vigtig) til `<h6>` (mindst vigtig). Tænk på disse som overskrifterne i en bog eller artikel - med hovedtitler, kapiteltitler, sektionsoverskrifter og så videre.
 
 ```html
 <h1>Dette er en Niveau 1 Overskrift</h1>
@@ -120,19 +118,19 @@ HTML tilbyder seks niveauer af overskrifter, fra `<h1>` (mest vigtig) til `<h6>`
 <h6>Dette er en Niveau 6 Overskrift</h6>
 ```
 
-Hver overskrift vises i en forskellig størrelse, hvor `<h1>` er den største og mest fremtrædende. Korrekt brug af overskrift-tags er vigtig for både læsbarhed og tilgængelighed—skærmlæsere bruger overskriftsniveauer til at hjælpe brugere med at navigere i sidestrukturen.
+Hver overskrift vises i en forskellig størrelse, hvor `<h1>` er den største og mest fremtrædende. Korrekt brug af overskrift-tags er vigtig for både læsbarhed og tilgængelighed - skærmlæsere bruger overskriftsniveauer til at hjælpe brugere med at navigere i sidestrukturen.
 
 Det er bedst at bruge kun én `<h1>` pr. side (normalt til hovedtitlen) og at bruge overskrifter i hierarkisk rækkefølge uden at springe niveauer over (f.eks. spring ikke fra `<h1>` til `<h3>` uden en `<h2>` imellem).
 
 ### Afsnit
 
-For at oprette et tekstafsnit skal du bruge `<p>` tagget:
+For at lave et tekstafsnit skal du bruge `<p>` tagget:
 
 ```html
 <p>Dette er et tekstafsnit. Det kan indeholde flere sætninger og vil blive vist som en tekstblok af browseren.</p>
 ```
 
-Afsnit er et af de mest almindelige HTML-elementer. Hvert afsnit starter automatisk på en ny linje med lidt plads før og efter det. Dette gør din tekst mere læsbar.
+Afsnit er et af de mest almindelige HTML-elementer. Hvert afsnit starter automatisk på en ny linje med lidt plads før og efter. Dette gør din tekst mere læsbar.
 
 Hvis du skriver flere afsnit, skal hvert have sine egne `<p>` tags:
 
@@ -141,7 +139,7 @@ Hvis du skriver flere afsnit, skal hvert have sine egne `<p>` tags:
 <p>Dette er det andet afsnit.</p>
 ```
 
-Browseren vil vise disse som separate tekstblokke med mellemrum imellem dem.
+Browseren vil vise disse som separate tekstblokke, med mellemrum imellem dem.
 
 ### Tekstformatering
 
@@ -150,12 +148,12 @@ Du kan fremhæve eller formatere tekst ved hjælp af forskellige tags. Disse tag
 ```html
 <strong>Denne tekst er fed</strong>
 ```
-`<strong>` tagget indikerer, at tekst er vigtig. Browsere viser dette typisk som fed tekst.
+`<strong>` tagget indikerer, at tekst er vigtig. Browsere viser typisk dette som fed tekst.
 
 ```html
 <em>Denne tekst er kursiv</em>
 ```
-`<em>` tagget fremhæver tekst, og browsere viser dette typisk som kursiv tekst.
+`<em>` tagget fremhæver tekst, og browsere viser typisk dette som kursiv tekst.
 
 ```html
 <u>Denne tekst er understreget</u>
@@ -177,7 +175,7 @@ Dette producerer: Dette er **meget _vigtig_** information.
 
 ### Lister
 
-HTML understøtter to hovedtyper af lister, som er meget nyttige til at organisere information:
+HTML understøtter to typer af lister, som er meget nyttige til at organisere information:
 
 **Ordnede lister (nummererede):**
 Ordnede lister bruges, når rækkefølgen af punkter er vigtig, som trin i en proces eller rangering af punkter.
@@ -205,7 +203,7 @@ Uordnede lister bruges, når punkterne ikke har en specifik rækkefølge eller s
 
 `<ul>` tagget opretter den uordnede listebeholder, og igen opretter hvert `<li>` tag et punkt. Browseren viser disse med punkttegn i stedet for numre.
 
-Lister kan også indlejres i hinanden for at skabe flerniveaulister:
+Lister kan også indlejres i hinanden for at skabe flerniveau-lister:
 
 ```html
 <ul>
@@ -228,7 +226,7 @@ Dette skaber et hierarki, hvor de indlejrede lister er indrykket og typisk bruge
 
 ### Links
 
-Links (eller hyperlinks) er det, der gør nettet til et "net"—de forbinder forskellige sider sammen. Links oprettes ved hjælp af `<a>` (anker) tagget:
+Links (eller hyperlinks) er det, der gør nettet til et "net" - de forbinder forskellige sider sammen. Links oprettes ved hjælp af `<a>` (anchor) tagget:
 
 ```html
 <a href="https://www.eksempel.com">Klik her for at besøge Eksempel.com</a>
@@ -241,8 +239,6 @@ Links kan pege på:
 - **Andre sider på din hjemmeside**: `<a href="om-os.html">Om Os</a>`
 - **Specifikke sektioner på en side**: `<a href="#sektion2">Spring til Sektion 2</a>` (Dette kræver et element med `id="sektion2"` et sted på siden)
 - **E-mail adresser**: `<a href="mailto:eksempel@eksempel.com">E-mail Os</a>` (Dette åbner brugerens e-mail program)
-
-Links er grundlæggende for webnavigation og er en af HTML's mest kraftfulde funktioner.
 
 ### Billeder
 
@@ -265,26 +261,26 @@ Du kan også kontrollere et billedes størrelse ved hjælp af `width` og `height
 <img src="kat.jpg" alt="En sød kat" width="300" height="200">
 ```
 
-Dog er det generelt bedre at kontrollere billedstørrelser ved hjælp af CSS i stedet for HTML-attributter.
+Dog er det generelt bedre at kontrollere billedstørrelser ved hjælp af CSS (hvilket kommer senere) i stedet for HTML-attributter.
 
 ## HTML-attributter
 
 Attributter giver yderligere information om HTML-elementer og ændrer, hvordan de opfører sig eller vises. De er altid angivet i åbningstagget og følger dette format:
 
 ```html
-<tag attribut="værdi">Indhold</tag>
+<tag attribute="værdi">Indhold</tag>
 ```
 
 Tænk på attributter som justerbare indstillinger for HTML-elementer. Forskellige elementer understøtter forskellige attributter, men nogle almindelige inkluderer:
 
-- `id` - Giver et element en unik identifikator, som kan bruges til at målrette det med CSS, JavaScript eller links inden for siden. Hver `id` skal være unik på siden.
+- `id` - Giver et element en unik identifikator, som kan bruges til at målrette det med CSS, JavaScript eller links inden for siden. Hvert `id` skal være unik på siden.
   ```html
-  <p id="introduktion">Dette afsnit har en ID på "introduktion".</p>
+  <p id="introduktion">Dette afsnit har en ID der hedder "introduktion".</p>
   ```
 
 - `class` - Tildeler en eller flere CSS-klasser til et element. I modsætning til ID'er kan flere elementer dele samme klasse, hvilket gør dem nyttige til styling af grupper af elementer.
   ```html
-  <p class="fremhævet vigtig">Dette afsnit har to klasser.</p>
+  <p class="fremhævet vigtig">Dette afsnit har to klasser - `fremhævet` og `vigtig`.</p>
   ```
 
 - `style` - Anvender inline CSS-styling direkte på et element. Dette overskriver eventuelle styles fra eksterne stylesheets.
@@ -308,7 +304,7 @@ Attributter gør HTML mere kraftfuldt og fleksibelt, hvilket giver dig mulighed 
 
 ## Oprettelse af en Simpel Hjemmeside
 
-Lad os samle det hele for at oprette en simpel hjemmeside:
+Lad os samle det hele for at lave en simpel hjemmeside:
 
 ```html
 <!DOCTYPE html>
@@ -320,16 +316,16 @@ Lad os samle det hele for at oprette en simpel hjemmeside:
     <h1>Mine Yndlingskæledyr</h1>
     
     <h2>Katte</h2>
-    <p>Jeg har to katte ved navn <strong>Whiskers</strong> og <strong>Mittens</strong>.</p>
+    <p>Jeg har to katte ved navn <strong>Cooper</strong> og <strong>Mia</strong>.</p>
     <p>De er begge redningskatte, som jeg adopterede fra det lokale internat for to år siden.</p>
     <img src="katte.jpg" alt="Mine to katte der sidder sammen">
     
     <h2>Hunde</h2>
-    <p>Jeg har også en hund ved navn <strong>Buddy</strong>.</p>
-    <p>Buddy er en golden retriever, som elsker at lege og gå lange ture i parken.</p>
+    <p>Jeg har også en hund ved navn <strong>Molly</strong>.</p>
+    <p>Molly er en golden retriever, som elsker at lege og gå lange ture i parken.</p>
     <img src="hund.jpg" alt="Min hund Buddy der leger i parken">
     
-    <h3>Buddys Yndlingsaktiviteter:</h3>
+    <h3>Mollys Yndlingsaktiviteter:</h3>
     <ul>
       <li>At gå ture</li>
       <li>At lege apport</li>
@@ -341,7 +337,7 @@ Lad os samle det hele for at oprette en simpel hjemmeside:
 </html>
 ```
 
-Denne simple hjemmeside demonstrerer:
+Denne simple hjemmeside viser eksempler på:
 - Den grundlæggende HTML-struktur
 - Overskrifter på forskellige niveauer (h1, h2, h3)
 - Afsnit med formateret tekst
@@ -395,7 +391,7 @@ For eksempel, hvis du vil forklare HTML-tags i dit indhold, kunne du skrive:
 <p>I HTML skrives tags som &lt;p&gt; og &lt;/p&gt;.</p>
 ```
 
-Dette ville vises som: "I HTML skrives tags som <p> og </p>."
+Dette ville vises som: `I HTML skrives tags som <p> og </p>.`
 
 Uden entiteterne ville browseren fortolke `<p>` som et faktisk HTML-tag i stedet for tekst, der skal vises.
 
@@ -410,7 +406,7 @@ HTML-entiteter bruges også til tegn, der ikke let kan indtastes på et tastatur
 
 1. **HTML handler om struktur, ikke udseende**: HTML definerer, hvad ting er, ikke hvordan de ser ud. For at kontrollere udseendet vil du efterhånden lære CSS (Cascading Style Sheets).
 
-2. **Luk altid dine tags korrekt**: De fleste HTML-elementer kræver både åbnings- og lukningstags. Hvis du glemmer at lukke tags, kan det forårsage uventede gengivningsproblemer.
+2. **Luk altid dine tags korrekt**: De fleste HTML-elementer kræver både åbnings- og lukningstags. Hvis du glemmer at lukke tags, kan det forårsage uventede problemer.
 
 3. **Indrykning er vigtig for læsbarhed**: Selvom browseren ikke bekymrer sig om indrykning, er korrekt indrykket kode meget lettere for mennesker at læse og vedligeholde.
 
@@ -426,11 +422,7 @@ HTML-entiteter bruges også til tegn, der ikke let kan indtastes på et tastatur
 
 For at forstærke din læring, prøv disse simple øvelser:
 
-1. **Opret en personlig profilside**: Lav en simpel hjemmeside om dig selv med:
-   - En overskrift med dit navn
-   - Et afsnit om dig selv
-   - En liste over dine interesser eller hobbyer
-   - Et billede (du kan bruge en placeholder, hvis du ikke vil bruge dit eget foto)
+
 
 2. **Opret en side om din yndlingshobby**: Inkluder:
    - En hovedoverskrift med hobbynavnet
