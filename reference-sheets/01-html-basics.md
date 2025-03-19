@@ -417,26 +417,3 @@ HTML-entiteter bruges også til tegn, der ikke let kan indtastes på et tastatur
 6. **HTML er tilgivende**: Browsere vil forsøge at vise din side, selv hvis der er fejl i din HTML, men dette kan føre til uensartede resultater. Stræb efter gyldig, velformet HTML.
 
 7. **Test din HTML i forskellige browsere**: Forskellige browsere kan gengive den samme HTML lidt forskelligt, så det er god praksis at teste dine sider i flere browsere.
-
-## Øvelser
-
-For at forstærke din læring, prøv disse simple øvelser:
-
-
-
-2. **Opret en side om din yndlingshobby**: Inkluder:
-   - En hovedoverskrift med hobbynavnet
-   - Flere underoverskrifter for forskellige aspekter
-   - Afsnit, der forklarer hvert aspekt
-   - En liste over udstyr eller materialer, der er nødvendige
-   - Mindst ét billede med passende alt-tekst
-   - Et link til en hjemmeside med mere information om hobbyen
-
-3. **Opret en simpel opskriftsside**: Inkluder:
-   - En overskrift med opskriftens navn
-   - Et kort introduktionsafsnit
-   - En liste over ingredienser
-   - Trin-for-trin instruktioner ved hjælp af en ordnet liste
-   - Et billede af den færdige ret med alt-tekst
-
-Husk, den bedste måde at lære HTML på er ved at øve sig. Start med simple sider og byg gradvist mere komplekse sider, efterhånden som du bliver mere komfortabel med syntaksen. Bekymr dig ikke om at få siderne til at se pæne ud endnu—fokuser på at lære den korrekte HTML-struktur og syntaks først.
