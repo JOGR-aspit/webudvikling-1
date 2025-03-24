@@ -76,18 +76,5 @@ Dette giver en sort kant og en hvid baggrund.
 
 ---
 
-## 6. **Tekstfarve i baggrund (`mix-blend-mode`)**
-Kontrollerer hvordan farver blandes.
-
-**Eksempel:**
-```css
-div {
-    mix-blend-mode: multiply;
-}
-```
-Dette ændrer, hvordan et element interagerer med baggrundsfarver.
-
----
-
 ## Konklusion
 CSS giver mange muligheder for farvestyring, fra simple statiske farver til avancerede blandingseffekter og gradienter. Farvebrug er essentiel for et flot og tilgængeligt webdesign.

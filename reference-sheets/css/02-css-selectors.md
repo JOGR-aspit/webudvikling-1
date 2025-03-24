@@ -96,140 +96,105 @@ h1, h2, h3 {
 
 ## Avancerede Selectors
 
-### 1. **Child Selector (`>`)**
-Vælger kun de direkte børn af et element.
+### **Struktur-baserede Selectors**
+
+#### **`:first-child`, `:last-child`, `:nth-child(n)`**
+Disse selectors vælger et element baseret på dets position blandt søskende-elementer.
 
 **Eksempel:**
 ```css
-div > p {
-    color: green;
+p:first-child {
+    color: blue;
 }
-```
-**HTML:**
-```html
-<div>
-    <p>Dette afsnit bliver grønt.</p>
-    <span>
-        <p>Dette afsnit bliver ikke grønt.</p>
-    </span>
-</div>
-```
-Kun `p`-elementer, der er direkte børn af `div`, påvirkes.
-
----
-
-### 2. **Descendant Selector (mellemrum)**
-Vælger alle efterkommere af et element.
-
-**Eksempel:**
-```css
-div p {
-    font-style: italic;
-}
-```
-**HTML:**
-```html
-<div>
-    <p>Dette afsnit bliver kursiveret.</p>
-    <span>
-        <p>Dette afsnit bliver også kursiveret.</p>
-    </span>
-</div>
-```
-Alle `p`-elementer inden for en `div` bliver kursiverede, uanset hvor dybt de er indlejret.
-
----
-
-### 3. **Adjacent Sibling Selector (`+`)**
-Vælger det umiddelbart næste element af samme niveau.
-
-**Eksempel:**
-```css
-h1 + p {
-    font-weight: bold;
-}
-```
-**HTML:**
-```html
-<h1>Overskrift</h1>
-<p>Dette afsnit bliver fed.</p>
-<p>Dette afsnit forbliver normalt.</p>
-```
-Kun det første `p`-element efter `h1` påvirkes.
-
----
-
-### 4. **General Sibling Selector (`~`)**
-Vælger alle søskende efter et specifikt element.
-
-**Eksempel:**
-```css
-h1 ~ p {
-    color: grey;
-}
-```
-**HTML:**
-```html
-<h1>Overskrift</h1>
-<p>Dette afsnit bliver gråt.</p>
-<p>Dette afsnit bliver også gråt.</p>
-```
-Alle `p`-elementer, der er søskende til `h1`, påvirkes.
-
----
-
-### 5. **Attribute Selector (`[attr]`)**
-Vælger elementer baseret på attributter.
-
-**Eksempel:**
-```css
-a[target="_blank"] {
+p:last-child {
     color: red;
 }
-```
-**HTML:**
-```html
-<a href="#" target="_blank">Åbn i nyt vindue</a>
-<a href="#">Normal link</a>
-```
-Kun links med `target="_blank"` bliver røde.
-
----
-
-### 6. **Pseudo-classes**
-Giver mulighed for at style elementer baseret på deres tilstand.
-
-**Eksempel:**
-```css
-a:hover {
-    color: orange;
-}
-```
-```css
-input:focus {
-    border: 2px solid blue;
-}
-```
-Disse regler ændrer linkfarven ved hover og fremhæver inputfelter, når de er i fokus.
-
----
-
-### 7. **Pseudo-elements**
-Tillader styling af specifikke dele af et element.
-
-**Eksempel:**
-```css
-p::first-line {
+p:nth-child(2) {
     font-weight: bold;
 }
 ```
+**Forklaring:**
+- `:first-child` vælger det første barn af en forælder.
+- `:last-child` vælger det sidste barn.
+- `:nth-child(n)` vælger et specifikt barn baseret på position.
+
+**HTML:**
+```html
+<div>
+    <p>Bliver blå</p>
+    <p>Bliver fed</p>
+    <p>Bliver rød</p>
+</div>
+```
+
+---
+
+#### **`:first-of-type`, `:nth-of-type(n)`**
+Disse selectors vælger det første eller nth element af en bestemt type, uanset andre elementtyper.
+
+**Eksempel:**
 ```css
-p::before {
-    content: "★ ";
-    color: gold;
+p:first-of-type {
+    text-decoration: underline;
+}
+p:nth-of-type(2) {
+    background-color: lightgray;
 }
 ```
-Første linje af et `p`-element bliver fed, og et guldfarvet stjerneikon tilføjes før hvert afsnit.
+**HTML:**
+```html
+<div>
+    <span>Ikke påvirket</span>
+    <p>Bliver understreget</p>
+    <span>Ikke påvirket</span>
+    <p>Bliver grå baggrund</p>
+</div>
+```
+
+**Forklaring:**
+- `:first-of-type` vælger det første forekommende element af en given type.
+- `:nth-of-type(n)` vælger det n’te element af en given type.
+
+---
+
+#### **`:empty`**
+Vælger elementer, der ikke indeholder nogen indhold (hverken tekst eller andre HTML-elementer).
+
+**Eksempel:**
+```css
+p:empty {
+    display: none;
+}
+```
+**HTML:**
+```html
+<p></p> <!-- Skjules -->
+<p>Har tekst</p> <!-- Visibles -->
+```
+
+**Forklaring:**
+- Hvis et element ikke har nogen børn eller tekstindhold, påvirkes det af `:empty`.
+
+---
+
+#### **`:not(X)`**
+Denne selector ekskluderer bestemte elementer fra at blive påvirket af styling.
+
+**Eksempel:**
+```css
+p:not(.special) {
+    color: gray;
+}
+```
+**HTML:**
+```html
+<p>Bliver grå</p>
+<p class="special">Bliver ikke grå</p>
+```
+
+**Forklaring:**
+- `:not(X)` udelukker de elementer, der matcher betingelsen (`X`).
+- I eksemplet ovenfor påvirkes alle `p`-elementer undtagen dem med klassen `.special`.
 
 ---
 
