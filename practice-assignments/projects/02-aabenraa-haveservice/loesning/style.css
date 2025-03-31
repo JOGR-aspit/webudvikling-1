@@ -7,7 +7,10 @@
 }
 
 .background-image {
-    background-color: green;
+    background-image: url(./images/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
@@ -26,7 +29,7 @@
     display: flex;
     gap: 16px;
     list-style: none;
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 100;
 }
 
@@ -70,4 +73,6 @@
     margin-bottom: 16px;
     border: none;
     border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
