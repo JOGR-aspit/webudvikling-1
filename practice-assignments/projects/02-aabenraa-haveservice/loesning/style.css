@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* #region header */
 .background-image {
     background-image: url(./images/banner-bg.jpg);
     background-position: center;
@@ -33,6 +34,8 @@
     font-weight: 100;
 }
 
+/* #endregion */
+/* #region hero */
 .hero {
     display: flex;
     flex-direction: column;
@@ -76,3 +79,5 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
+
+/* #endregion */
