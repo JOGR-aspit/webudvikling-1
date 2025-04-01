@@ -81,3 +81,64 @@
 }
 
 /* #endregion */
+/* #region info */
+.info-content {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: #555555;
+    font-size: 12px;
+    padding: 64px 32px;
+    gap: 32px;
+}
+
+.info-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-content-left h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.green-highlight {
+    color: limegreen;
+}
+
+.info-task-list {
+    padding-left: 12px;
+    list-style-type: circle;
+}
+
+.info-content-right {
+    display: flex;
+    gap: 16px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 220px;
+}
+
+.info-box h4 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.info-ydelser-button {
+    color: white;
+    background-color: limegreen;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    width: 160px;
+}
+
+/* #endregion */
