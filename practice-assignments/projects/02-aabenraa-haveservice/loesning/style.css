@@ -148,3 +148,73 @@
 }
 
 /* #endregion */
+/* #region ydelser */
+.ydelser {
+    background-color: #6aaf09;
+}
+.ydelser-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 32px;
+    gap: 16px;
+}
+
+.ydelser-content h3 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.ydelser-content p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ydelser-boxes {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 32px;
+}
+
+.ydelser-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    gap: 8px;
+}
+
+.ydelser-box img {
+    width: 100%;
+    height: auto;
+    border: 8px solid #7ab429;
+    border-radius: 128px;
+}
+
+.ydelser-box h4 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ydelser-box p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+
+
+
+/* #endregion */
