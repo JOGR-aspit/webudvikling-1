@@ -86,6 +86,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #eeeeee;
 }
 
 .info-content {
@@ -149,6 +150,7 @@
 
 /* #endregion */
 /* #region ydelser */
+
 .ydelser {
     background-color: #6aaf09;
 }
@@ -213,8 +215,144 @@
     font-size: 12px;
 }
 
+/* #endregion */
+/* #region kontakt */
+.kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 32px;
+    background-color: #eeeeee;
+}
+.kontakt-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    font-family: "Roboto", sans-serif;
+    color: #666666;
+}
 
+.kontakt-content h3 {
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
 
+.kontakt-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.kontakt-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 250px;
+}
+
+.kontakt-info-box h4 {
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 8px;
+    border-bottom: 4px solid #cccccc;
+    padding-bottom: 8px;
+}
+
+.kontakt-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.kontakt-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.kontakt-form-container h4 {
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.kontakt-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    gap: 16px;
+}
+
+.kontakt-form-header input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.kontakt-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.kontakt-form-button {
+    color: white;
+    background-color: #6aaf09;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    width: 160px;
+}
+
+/* #endregion */
+/* #region footer */
+
+footer {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 32px;
+    color: white;
+}
+
+.footer-logo {
+    border: 8px solid #666666;
+    background-color: #666666;
+    border-radius: 32px;
+    width: 48px;
+    height: 48px;
+}
 
 
 /* #endregion */
