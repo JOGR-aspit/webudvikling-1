@@ -1,4 +1,4 @@
-# Sign-up Form
+# Portfolio
 Som vi snakkede om i timen, så kan det være meget fordelagtigt at have en portefølje (portfolio), som i løbende holder opdateret med jeres bedste projekter i løbet af jeres tid her på AspIT. I kan opdatere den både med projekter, men også det generelle udseende, som i lærer nye ting omkring webudvikling.
 
 Jeg vedhæfter et eksempel på et design, som i evt. kan vælge at følge hvis i mangler inspirationen - I er dog også mere end velkomne til at lave jeres eget design, og implementere det. Hvis i vælger at følge design-eksemplet, så skal i ikke kopiere det 1-til-1 ift. farver og skrifttyper - Det er blot ment som inspiration til det overordnede design. Farver, skrifttyper osv. skal i selv udvælge og implementere med baggrund i det vi har snakket om de sidste par dage, ift. farveteori, gestalt-principper og SEO.
